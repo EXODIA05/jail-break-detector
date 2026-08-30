@@ -1,0 +1,9 @@
+﻿train_jailbreak.csv
+val_jailbreak.csv
+jailbreak_detector_light.joblib
+
+__pycache__/
+*.pyc
+venv/
+.venv/
+.env
