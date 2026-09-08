@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 
 def prepare_jailbreak_data():
     print("Loading dataset...")
-    # the data is loaded from Hugging Face
     dataset = load_dataset("allenai/wildjailbreak", "train", split="train", delimiter="\t", keep_default_na=False)
     df = dataset.to_pandas()
 
