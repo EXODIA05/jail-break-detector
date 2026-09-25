@@ -1,9 +1,15 @@
-﻿train_jailbreak.csv
+train_jailbreak.csv
 val_jailbreak.csv
-jailbreak_detector_light.joblib
 
 __pycache__/
 *.pyc
 venv/
 .venv/
 .env
+logs/
+*.pid
+.~lock.*
+frontend/node_modules/
+frontend/dist/
+landing/node_modules/
+landing/dist/

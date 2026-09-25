@@ -8,6 +8,7 @@ import joblib
 # 1. Load data
 print("Loading data...")
 train_df = pd.read_csv("train_jailbreak.csv").dropna(subset=["prompt", "label"])
+
 val_df = pd.read_csv("val_jailbreak.csv").dropna(subset=["prompt", "label"])
 
 X_train, y_train = train_df["prompt"], train_df["label"]

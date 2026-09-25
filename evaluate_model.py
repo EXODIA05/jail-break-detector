@@ -23,8 +23,8 @@ print(f"ROC AUC Score: {roc_auc:.4f}")
 # 4. Find the Optimal Threshold using Precision-Recall Curve
 precisions, recalls, thresholds = precision_recall_curve(y_true, y_probs)
 
-# Calculate F1 scores for each threshold to find the mathematical optimum
-f1_scores = 2 * (precisions * recalls) / (precisions + recalls + 1e-8)
+# Calculate F1 scores for each threshold to find the mathematical optimum (thresholds has length N, precisions/recalls have N+1)
+f1_scores = 2 * (precisions[:-1] * recalls[:-1]) / (precisions[:-1] + recalls[:-1] + 1e-8)
 optimal_idx = np.argmax(f1_scores)
 optimal_threshold = thresholds[optimal_idx]
 

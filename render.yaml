@@ -1,0 +1,22 @@
+# Render Blueprint for 100% Free Web Service Deployment
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: aegis-guardrail-gateway
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: THRESHOLD
+        value: "0.4909"
+      - key: MODEL_PATH
+        value: jailbreak_detector_light.joblib
+      - key: DEFAULT_LLM_PROVIDER
+        value: builtin
+      - key: GEMINI_API_KEY
+        sync: false

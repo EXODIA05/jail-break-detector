@@ -1,0 +1,17 @@
+{
+  "buildCommand": "cd landing && npm ci && npm run build && cd ../frontend && npm ci && npm run build && cd .. && mkdir -p dist_vercel && cp -r landing/dist/* dist_vercel/ && mkdir -p dist_vercel/playground && cp -r frontend/dist/* dist_vercel/playground/",
+  "outputDirectory": "dist_vercel",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

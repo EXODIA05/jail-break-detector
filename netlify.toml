@@ -1,0 +1,16 @@
+# Netlify Configuration for Free Global Edge Deployment
+[build]
+  command = "cd landing && npm ci && npm run build && cd ../frontend && npm ci && npm run build && cd .. && mkdir -p dist_netlify && cp -r landing/dist/* dist_netlify/ && mkdir -p dist_netlify/playground && cp -r frontend/dist/* dist_netlify/playground/"
+  publish = "dist_netlify"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
