@@ -101,7 +101,7 @@ To run the full stack — **3D Interactive Product Landing Page** (port 5173), *
 ./stop_local.sh
 ```
 
-- **🌐 3D Product Landing Page:** [http://localhost:5173](http://localhost:5173) *(Three.js threat detection particle system, 60fps WebGL, responsive security layout)*
+- **🌐 3D Product:** [http://localhost:5173](https://aegis-guardrail-gateway.onrender.com/) 
 - **✨ React 3D Cyber Playground:** [http://localhost:3000](http://localhost:3000) *(Interactive 3D Hologram, prompt inspector, sound FX, CSV screener)*
 - **🛡️ FastAPI Interactive Docs:** [http://localhost:8001/docs](http://localhost:8001/docs)
 - **📡 FastAPI Health Check:** [http://localhost:8001/health](http://localhost:8001/health)
